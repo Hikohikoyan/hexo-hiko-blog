@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        留言板 *`BBT BBS
+    </title>
+    <link rel="stylesheet" href="liuyanban.css">
+    <!-- <script type="text/javascript" src="button.php"></script> -->
+    <!-- <script type="text/javascript" >
+    alert(jstext);
+    </script> -->
+</head>
+
+<body>
+    <h1>
+        留言板
+    </h1>
+    <div class="login_signup">
+        请先登录！
+    </div>
+        <div class="box1">
+            <label class="name" id="nichen">
+                昵称：
+            </label>
+            <input type="text" id="shuru1" class="nametext" name="username" placeholder="你谁" required>
+        </div>
+        <div class="box1" id="shurubox">
+            <label class="anhao">
+                暗号：
+            </label>
+            <input type="text" class="pswdtext" id="password" placeholder="匹配暗号中……" required>
+            <br>
+        </div>
+        <div class="box1">
+            <input type="submit" class="check" value="登录" onclick="login()">
+            <br><br>
+            <input type="submit" class="signup" value="注册" onclick="signup()">
+            <br><br>
+            <input type="button" class="newpage" id="hello" value="点这个走进留言板" onclick="window.open('page1.html')">
+        </div>
+    <script src="jquery-3.3.1.js">
+    </script>
+    <script src="BBS.js">
+    </script>
+
+</body>
+<div class="adv">
+    <a href="http://www.w3school.com.cn/"> <img src="images/10.jpg" alt="广告"></a>
+</div>

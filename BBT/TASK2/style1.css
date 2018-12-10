@@ -1,0 +1,51 @@
+*{
+    background-color: gainsboro;
+    text-align: center;
+}
+h1{
+    text-decoration-color: darkolivegreen;    
+}
+img#you{
+    float: right;
+    margin-right:170px;
+    width: 400x;
+    height: 350px;
+
+}
+.tab{
+    margin-right: 77%;
+}
+textarea#fudu::-moz-placeholder{
+    text-align: start;
+}
+#btn1{
+    width: 45px;
+    height: 60px;
+    background-color: cornflowerblue;
+    font-size: 25px;
+}
+#btn2{
+    height: 60px;  
+    background-color: cornflowerblue;
+    font-size: 25px;
+}
+
+#hahaha{
+    margin-left: 5%
+}
+.showbox{
+    background-clip: content-box;
+
+}
+#mina{
+    font-size: 220%;
+    margin-right: 66px;
+}
+.BBS{
+    position: relative;
+    box-sizing: border-box;
+    text-align: start;
+    width: 45%;
+    height: 300px;
+    clear: both;
+}
