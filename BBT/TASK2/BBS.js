@@ -19,25 +19,66 @@ $(function () {
     // var result = Array(3)
     var people;
     var password;
+    var badboy=0;
+    function preventing(){
+
+    if (people.trim() === "") {
+        alert("输入用户名");
+        badboy=1;
+    }
+    if(people.trim().indexOf("#")>-1){
+        badboy=1;
+    }
+    if (password.trim() === "") {
+        alert("密码呢？");
+        badboy=1;
+    }
+    if (people.trim().indexOf("=")>-1){
+        badboy=1;
+    }
+    if (people.trim().indexOf(".")>-1){
+        badboy=1;
+    }
+    if (people.trim().indexOf("<")>-1){
+        badboy=1;
+    }
+    if (people.trim().indexOf(">")>-1){
+        badboy=1;
+    }
+    if (people.trim().indexOf("&")>-1){
+        badboy=1;
+    }
+    if (people.trim().indexOf("/")>-1){
+        badboy=1;
+    }
+    if(badboy===0){console.log("这些是你输入的东西");
+    console.log(people);
+    console.log(password);}else{
+        alert("警告(我不管 我爱弹窗)");
+    }}
     login = function () {
         people = document.getElementById("shuru1").value;
         password = document.getElementById("password").value;
-  
-        if (people.trim() === "") {
-            alert("输入用户名");
-            return;
-        }
-        if (password.trim() === "") {
-            alert("密码呢？");
-            return;
-        } else {
-            console.log("这些是你输入的东西");
-            console.log(people);
-            console.log(password);
-            alert("oh");
+        preventing();
+        // if (people.trim() === "") {
+        //     alert("输入用户名");
+        //     return;
+        // }
+        // if (password.trim() === "") {
+        //     alert("密码呢？");
+        //     return;
+        // } else {
+        //     console.log("这些是你输入的东西");
+        //     console.log(people);
+        //     console.log(password);
+        //     alert("oh");
+        //     denglu();
+        // }
+        if(badboy===0){
             denglu();
+        }else{
+            console.log("不允许你登录");
         }
-
         sending = JSON.stringify({
             people,
             password,
@@ -68,17 +109,14 @@ $(function () {
             people,
             password
         });
-        if (people.trim() === "") {
-            alert("输入用户名");
-            return;
+       
+        preventing();
+        if(badboy===0){
+            zhuce();
+        }else{
+            console.log("不允许你注册");
         }
-        if (password.trim() === "") {
-            alert("密码呢？");
-            return;
-        } else {console.log("这些是你输入的东西");
-        console.log(people);
-        console.log(password);}
-        $.ajax(
+        function zhuce(){$.ajax(
             {
                 url: "backend/signup.php",
                 type: "POST",
@@ -91,7 +129,7 @@ $(function () {
                     check();
                 }
             }
-        );
+        )}
         
     }
 
