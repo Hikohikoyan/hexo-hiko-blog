@@ -84,6 +84,6 @@ deploy:
   pass: Zxcvbnm@123
   remotePath: /var/repo/
   port: 22
-  type: git
-  repo: ubuntu@VM-0-16-ubuntu 203.195.221.189:/var/repo/hexo_static
-  branch: master
+  # type: git
+  # repo: ubuntu@VM-0-16-ubuntu 203.195.221.189:/var/repo/hexo_static
+  # branch: master
