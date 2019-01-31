@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
+title: Hiko' Blog
+subtitle: I know my shit
+description: A simple blog to store my laji code.
 keywords:
-author: John Doe
-language:
+author: Hikoyan
+language: English
 timezone:
 
 # URL
@@ -78,4 +78,9 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: sftp
+  host: 203.195.221.189
+  user: ubuntu
+  pass: Zxcvbnm@123
+  remotePath: /var/repo/
+  port: 22
