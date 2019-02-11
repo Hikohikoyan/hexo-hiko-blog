@@ -2,7 +2,7 @@
 menu:
   Home: /
   Archives: /archives
-  BBT: /BBT/
+  BBT: /BBT/bbs.html
 rss: /atom.xml
 
 # Content
@@ -32,7 +32,7 @@ show_count: false
 google_analytics:
 gauges_analytics:
 favicon: /favicon.png
-twitter: @hikohikoyan
+twitter: 
 google_plus:
 fb_admins:
 fb_app_id:

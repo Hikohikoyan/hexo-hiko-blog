@@ -1,4 +1,3 @@
-//  var status='happytreefriend'
 $(function () {
     // do something
 
