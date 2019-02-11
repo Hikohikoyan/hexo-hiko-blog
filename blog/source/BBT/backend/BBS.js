@@ -84,7 +84,7 @@ $(function () {
         });
         function denglu() {
             $.ajax({
-                url: "php/login.php",
+                url: "backend/php/login.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",
@@ -117,7 +117,7 @@ $(function () {
         }
         function zhuce(){$.ajax(
             {
-                url: "php/signup.php",
+                url: "backend/php/signup.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",

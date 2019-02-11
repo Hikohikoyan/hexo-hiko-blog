@@ -24,19 +24,19 @@ changeImage = function () {
     element = document.getElementById('you'); 
     console.log(element.src); 
     if (element.src.match("11")) {
-        element.src = "img/y.jpg"; 
+        element.src = "backend/img/y.jpg"; 
         return; 
     }
     if (element.src.match("y")) {
-        element.src = "img/o.jpg"; 
+        element.src = "backend/img/o.jpg"; 
         return; 
     }
     if (element.src.match("o")) {
-        element.src = "img/u.jpg"; 
+        element.src = "backend/img/u.jpg"; 
         return; 
     }
     if (element.src.match("u")) {
-        element.src = "img/11.jpeg"; 
+        element.src = "backend/img/11.jpeg"; 
         return; 
     }
     //点点乐
@@ -59,7 +59,7 @@ hao = function () {
 })
 $.ajax
 ( {
-    url:"php/bbs.php", 
+    url:"backend/php/bbs.php", 
     type:"POST", 
     contentTyoe:'application/x-www-form-urlencoded', 
     dataType:"json", 
@@ -76,7 +76,7 @@ playfudu = function () {
     var guding = document.createElement("div"); 
     guding.id = "cantmove"; hihi.appendChild(guding); 
     $.ajax( {
-    url:"php/show.php", 
+    url:"backend/php/show.php", 
     type:"POST", 
     contentTyoe:'application/x-www-form-urlencoded', 
     dataType:"json", 
@@ -161,7 +161,7 @@ function compile() {
     }
     function yoxi(bibi){
         $.ajax( {
-            url:"php/compile.php", 
+            url:"backend/php/compile.php", 
             type:"POST", 
             contentTyoe:'application/x-www-form-urlencoded', 
             dataType:"json", 
@@ -179,7 +179,7 @@ function delmsg() {
     })
     $.ajax
     ( {
-        url:"php/compile.php", 
+        url:"backend/php/compile.php", 
         type:"POST", 
         contentTyoe:'application/x-www-form-urlencoded', 
         dataType:"json", 
