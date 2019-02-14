@@ -3,12 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Hiko
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
+author: hiko
+language: 
+ - zh-CN
+ - en  
+ - ja
+ - fr
 timezone:
 
 # URL
