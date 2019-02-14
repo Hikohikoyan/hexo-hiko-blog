@@ -6,12 +6,10 @@
 menu:
   Home: /
   Archives: archives
-  Categories: categories
-  Tags: tags
-  About: about
+  BBT: /BBT/bbs.html
 rss: /atom.xml
 
-since: 2013
+since: 2018
 
 # Set default keywords (Use a comma to separate)
 keywords: ""
@@ -51,7 +49,7 @@ archive_pagination: true
 
 # Post Article's Content
 post_catalog:
-  enable: true
+  enable: false
 # 开启主页摘要
 post_excerpt: true
 
@@ -112,7 +110,7 @@ highlight_theme: default
 # Article theme color
 # Available value:
 #    random | orange | blue | red | green | black
-theme_color: random
+theme_color: black
 
 
 # display widgets at the bottom of index pages (pagination == 2)
