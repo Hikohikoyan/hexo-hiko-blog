@@ -1,38 +1,18 @@
 ---
-title: Hiko'Blog ❥(^_-)
+title: Hiko'Blog (^_-)
 ---
 Welcome ! 
 
-## Profiles
+终于在情人节这天把所有的博客需要的配置啊、搞坏掉的自己的仓库和在返校前想边改代码shit山边吃掉的小零食都准备完毕了，✿✿ヽ(°▽°)ノ✿
 
-### Create a new post
+整理一下这几天的成果大概就是，学会了各种编辑器、mysql等等命令行中如何退出的方法，靠着东撞西撞瞎搞乱搞的摸鱼方式弄好了这个博客（完全没弄好）。总之 简单md一些可能以后也需要回过头来咀嚼的知♂识，顺便充实首页头版文章（看上去很丰富的样子），毕竟平时不怎么习惯网上分享什么心得什么感悟，要写的话就长篇大论还会陷入丧气的咸鱼状态就，不了不了。
 
-``` bash
-$ hexo new "My New Post"
-```
+首先是买的辣鸡腾讯的服务器，一开始装了centos，啊然后因为学习后续内容的时候要康教程啊，教程都是apt-get，虽然也有很多yum的……反正就是为了一致（放弃思考）就干脆从控制台那重装了系统。诶装LNMP的时候其实，虽然看到有一键脚本但是…（种种原因一切都手动配置了 大概花了两三天吧 25 X 3 hours)。手动配置的过程 其实很有意思，一开始接触vim的时候，诶第一次vim file 可能手抖打错文件名了，是个新文件，瞬间一脸懵也不知道怎么退出（虽然百度得到可是，我不知道要搜vim编辑器  我以为是突然什么东西…），还在insert的状态下打了：wq就很气了。
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+装php的时候，因为php更新了，但是2018年的教程仍然是php7.0，所以修改文件的时候经常找不到conf，然后一点点cd ..才发现 文件夹都 只有一个7.2 算了都是些沙雕操作。 mysql的一键安装似乎是没有给root加密码的，我记得我设过啊？反正直接重新创了一个blog用户 sudo进去给它加了权限，把时间花在这些上确实有点浪费，却也算是学到很多了。
 
-### Run server
+接下来是1 修改PHP 登录注册的安全性问题还没好好做完呢，虽然hexo提供了插件，应该可以直接用多说之类的，一想到这好歹算是个必修能力，还是老老实实借了本书回来慢慢研究。2 页面美化  banner的图知道尺寸以后 打算去ai直接画一个自己的（弄完php还有时间的话）  虽然hexo的主页是↑←这样已经很不错的简约模板，出于学习的目的（而且也不是很明白ejs） 在留言板的页面中skip_layout了，嘛还有很多要做。
 
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
+大年初十过得这么有意义真是よかった。
 
 email to 1170610441@qq.com
