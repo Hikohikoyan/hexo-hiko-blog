@@ -1,11 +1,12 @@
 <?php
 header('Content-Type:application/json; charset=utf-8');
+require_once("db_info.php");
 $data = file_get_contents('php://input');
 $data = json_decode($data, true);
-$conn=mysqli_connect("localhost","root","","bbs");
+$conn=mysqli_connect($SERV,$USER,$PSWD,$DB_LOGIN);
 if(!$conn){
-    die(mysqli_error());
-    // echo "Error!";
+    $result=["errmsg"=>"数据库连接失败"];
+    exit;
 }
 $username=$data["people"];
 $password=$data["password"];

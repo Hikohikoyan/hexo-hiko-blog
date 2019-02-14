@@ -59,20 +59,6 @@ $(function () {
         people = document.getElementById("shuru1").value;
         password = document.getElementById("password").value;
         preventing();
-        // if (people.trim() === "") {
-        //     alert("输入用户名");
-        //     return;
-        // }
-        // if (password.trim() === "") {
-        //     alert("密码呢？");
-        //     return;
-        // } else {
-        //     console.log("这些是你输入的东西");
-        //     console.log(people);
-        //     console.log(password);
-        //     alert("oh");
-        //     denglu();
-        // }
         if(badboy===0){
             denglu();
         }else{
@@ -84,7 +70,7 @@ $(function () {
         });
         function denglu() {
             $.ajax({
-                url: "backend/php/login.php",
+                url: "/BBT/backend/php/login.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",
@@ -117,7 +103,7 @@ $(function () {
         }
         function zhuce(){$.ajax(
             {
-                url: "backend/php/signup.php",
+                url: "/BBT/backend/php/signup.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",
