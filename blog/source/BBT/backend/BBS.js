@@ -19,10 +19,11 @@ $(function ()
     // var result = Array(3)
     var people;
     var password;
+    var badboy;
     function check_input()
     {
-        var str1=new RegExp(people.trim().toLowercase());
-        var str2=new RegExp(password.trim().toLowercase());
+        var str1=new RegExp(people.trim().toLowerCase());
+        var str2=new RegExp(password.trim().toLowerCase());
         var str3="<script>";
         var badboy=str1.test(str3);
         if (badboy=false){
@@ -30,10 +31,7 @@ $(function ()
         badboy=str1.test(str3);}
     }
     function htmlEncode (str){
-        return $('<span/>').text().html();
-    }
-    function htmlDecode (str){
-        return $('<span/>').html().text();
+        return $('<span/>').html();
     }
     function catch_input(){
         people = document.getElementById("shuru1").value;
@@ -56,7 +54,7 @@ $(function ()
         });
         function denglu() {
             $.ajax({
-                url: "http://203.195.221.189/BBT/backend/php/login.php",
+                url: "/BBT/backend/php/login.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",
