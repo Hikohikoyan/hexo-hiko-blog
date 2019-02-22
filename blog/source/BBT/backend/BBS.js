@@ -1,4 +1,5 @@
-$(function () {
+$(function () 
+{
     // do something
 
     // if(document.readyState==="loading"){
@@ -18,47 +19,32 @@ $(function () {
     // var result = Array(3)
     var people;
     var password;
-    var badboy=0;
-    function preventing(){
-
-    if (people.trim() === "") {
-        alert("输入用户名");
-        badboy=1;
+    function check_input()
+    {
+        var str1=new RegExp(people.trim().toLowercase());
+        var str2=new RegExp(password.trim().toLowercase());
+        var str3="<script>";
+        var badboy=str1.test(str3);
+        if (badboy=false){
+        str3="<?";
+        badboy=str1.test(str3);}
     }
-    if(people.trim().indexOf("#")>-1){
-        badboy=1;
+    function htmlEncode (str){
+        return $('<span/>').text().html();
     }
-    if (password.trim() === "") {
-        alert("密码呢？");
-        badboy=1;
+    function htmlDecode (str){
+        return $('<span/>').html().text();
     }
-    if (people.trim().indexOf("=")>-1){
-        badboy=1;
-    }
-    if (people.trim().indexOf(".")>-1){
-        badboy=1;
-    }
-    if (people.trim().indexOf("<")>-1){
-        badboy=1;
-    }
-    if (people.trim().indexOf(">")>-1){
-        badboy=1;
-    }
-    if (people.trim().indexOf("&")>-1){
-        badboy=1;
-    }
-    if (people.trim().indexOf("/")>-1){
-        badboy=1;
-    }
-    if(badboy===0){console.log("这些是你输入的东西");
-    console.log(people);
-    console.log(password);}else{
-        alert("警告(我不管 我爱弹窗)");
-    }}
-    login = function () {
+    function catch_input(){
         people = document.getElementById("shuru1").value;
         password = document.getElementById("password").value;
-        preventing();
+        htmlEncode(people);
+        htmlEncode(password);
+        check_input();
+    }
+    login = function () {
+        catch_input();
+        console.log("user:"+people);
         if(badboy===0){
             denglu();
         }else{
@@ -70,7 +56,7 @@ $(function () {
         });
         function denglu() {
             $.ajax({
-                url: "/BBT/backend/php/login.php",
+                url: "http://203.195.221.189/BBT/backend/php/login.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",
@@ -88,34 +74,32 @@ $(function () {
     //     window.open="http://www.baidu.com";
     // }
     signup = function () {
-        people = document.getElementById("shuru1").value;
-        password = document.getElementById("password").value;
+        catch_input();
         sending = JSON.stringify({
             people,
             password
         });
-       
-        preventing();
-        if(badboy===0){
+        if(badboy!=true){
             zhuce();
         }else{
-            console.log("不允许你注册");
-        }
-        function zhuce(){$.ajax(
+            console.log("出bug咯");}
+        function zhuce()
+        {
+            $.ajax(
             {
-                url: "/BBT/backend/php/signup.php",
+                url: "http://203.195.221.189/BBT/backend/php/signup.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",
                 data: sending,
-                success: function (data) {
+                success: function (data) 
+                {
                     alert(data["errmsg"]);
                     login_ornot=0;
                     check();
                 }
-            }
-        )}
-        
+            })
+        }
     }
 
         function check(){
@@ -132,7 +116,7 @@ $(function () {
             hello.style.display='none';
         }
     }}
-});
+})
 // Btn.onclick=function(){
 //     var MsgValue=Msg.Value;
 //     var tree=innerHTML=MsgValue+"<span></span>";*/

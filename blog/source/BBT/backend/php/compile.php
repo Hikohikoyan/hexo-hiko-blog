@@ -1,6 +1,7 @@
 <?php
 header('Content-Type:application/json; charset=utf-8'); 
-$conn = mysqli_connect("localhost", "root", "", "bbs"); 
+require_once("db_info.php");
+$conn = mysqli_connect($SERV, $USER, $PSWD, $DB_SHOW); 
 $data = file_get_contents('php://input');
 $data = json_decode($data, true); 
 if ( ! $conn) {
@@ -13,6 +14,13 @@ $sql="UPDATE `players` SET`username`=$username,`message`=$newmsg WHERE (username
 $result = $conn-> query($sql);
 $sql="SELECT * FROM 'players' WHERE (username=$username) AND(message=$newmsg) ";
 $result = $conn-> query($sql);
-$r=mysqli_fetch_row($result);
+if (!$result){
+    $r=[
+        "message"=>mysqli_error($conn)
+    ];
+    exit();
+}else{
+    $r=mysqli_fetch_row($result);
+}
 $data["newmsg"]=$r["message"];
 echo json_encode($data);
