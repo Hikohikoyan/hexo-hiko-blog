@@ -8,7 +8,7 @@ $(function ()
     function getname() {
         for (var i = 9; i <= l1; i ++) {
             people = people + catchall[i]; 
-            console.log(people + "←是people的值" + "______" + catchall[i] + "→是catchall[" + i + "]的值"); 
+            //console.log(people + "←是people的值" + "______" + catchall[i] + "→是catchall[" + i + "]的值"); 
         }
         // if(people.length>l1){
         //     l1=people.length-l1+1;
