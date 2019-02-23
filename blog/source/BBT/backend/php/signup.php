@@ -24,7 +24,7 @@ echo json_encode($result);
 return;
 }
 // var_dump($username);
- $sql="INSERT INTO users(username, pssword) VALUES ('$username','$password')";
+ $sql="INSERT INTO users(username, password) VALUES ('$username','$password')";
  $result=$conn->query($sql);
  $result=[
           "errcode"=>0,
