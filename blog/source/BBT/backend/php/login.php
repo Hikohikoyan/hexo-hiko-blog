@@ -4,7 +4,7 @@ require_once("db_info.php");
 $data = file_get_contents('php://input');
 $data = json_decode($data, true);
 // var_dump($data);
-$conn=mysqli_connect($SERV,$USER,$PSWD,$DB_LOGIN);
+$conn=mysqli_connect($SERV,$USER,$PSWD,$DB);
 if(!$conn){
     // die(mysqli_error());
      $result=["errmsg"=>"数据库连接失败"];

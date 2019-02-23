@@ -39,19 +39,24 @@ $(function ()
         htmlEncode(people);
         htmlEncode(password);
         check_input();
+        if(badboy!=false){
+            badboy="ATTENTION：输入非法字符！";
+            alert(badboy);
+        }else{
+            badboy=0;
+        }
     }
     login = function () {
-        catch_input();
+        catch_input();    
         console.log("user:"+people);
-        if(badboy===0){
-            denglu();
-        }else{
-            console.log("不允许你登录");
-        }
-        sending = JSON.stringify({
+        if(badboy===0)
+        {
+            sending = JSON.stringify({
             people,
-            password,
-        });
+            password
+            });
+            denglu();
+        }
         function denglu() {
             $.ajax({
                 url: "/BBT/backend/php/login.php",
@@ -73,11 +78,11 @@ $(function ()
     // }
     signup = function () {
         catch_input();
-        sending = JSON.stringify({
-            people,
-            password
-        });
         if(badboy!=true){
+            sending = JSON.stringify({
+                people,
+                password
+            });
             zhuce();
         }else{
             console.log("出bug咯");}

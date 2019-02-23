@@ -3,7 +3,7 @@ header('Content-Type:application/json; charset=utf-8');
 require_once("db_info.php");
 $data = file_get_contents('php://input');
 $data = json_decode($data, true);
-$conn=mysqli_connect($SERV,$USER,$PSWD,$DB_LOGIN);
+$conn=mysqli_connect($SERV,$USER,$PSWD,$DB);
 if(!$conn){
     $result=["errmsg"=>"数据库连接失败"];
     exit;
