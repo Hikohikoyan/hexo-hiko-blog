@@ -5,7 +5,7 @@ $data = file_get_contents('php://input');
 $data = json_decode($data, true);
 $conn=mysqli_connect($SERV,$USER,$PSWD,$DB);
 if(!$conn){
-    $result=["errmsg"=>"数据库连接失败"];
+    $result=["errmsg"=>"mysql connect failed"];
     exit;
 }
 $username=$data["people"];
@@ -14,20 +14,26 @@ $sql="SELECT * From users  where username = '$username' ";
 $result=$conn->query($sql);
 $row=mysqli_fetch_assoc($result);
 // var_dump($row["username"]);
-if($row["username"]==$username){
+unset($result);
+if($row){
     $result=[
     "errcode"=>111,
-    "errmsg"=>"你不是注册过了吗",
+    "errmsg"=>"Login please",
     "data"=>''
 ];
 echo json_encode($result);
-return;
+exit;
+}else{
+    $sql="INSERT INTO users(username, password) VALUES ('$username','$password')";
+    $result=$conn->query($sql);
+    $result=[
+             "errcode"=>0,
+              "errmsg"=>"Signup Success",
+              "data"=>'' ];
 }
-// var_dump($username);
- $sql="INSERT INTO users(username, password) VALUES ('$username','$password')";
- $result=$conn->query($sql);
- $result=[
-          "errcode"=>0,
-           "errmsg"=>"开始你的表演吧",
-           "data"=>'' ];
-echo json_encode($result);
+if(isset($result)){
+    echo json_encode($result);
+}else{
+    $result=["errmsg"=>"Signup failed"];
+    echo json_encode($result);
+}

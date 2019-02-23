@@ -19,37 +19,30 @@ $(function ()
     // var result = Array(3)
     var people;
     var password;
-    var badboy;
-    function check_input()
+    var badboy=true;
+    function check_input(s)
     {
-        var str1=new RegExp(people.trim().toLowerCase());
-        var str2=new RegExp(password.trim().toLowerCase());
-        var str3="<script>";
-        var badboy=str1.test(str3);
-        if (badboy=false){
-        str3="<?";
-        badboy=str1.test(str3);}
-    }
-    function htmlEncode (str){
-        return $('<span/>').html();
+        s=s.trim();
+        var str1=new RegExp(s.toLowerCase());
+        var patt=/\w%()!_~='"><.script/;
+        return patt.test(str1);
     }
     function catch_input(){
         people = document.getElementById("shuru1").value;
         password = document.getElementById("password").value;
-        htmlEncode(people);
-        htmlEncode(password);
-        check_input();
-        if(badboy!=false){
-            badboy="ATTENTION：输入非法字符！";
-            alert(badboy);
-        }else{
-            badboy=0;
-        }
+        if(check_input(people)==false){
+            console.log("用户名输入OK");
+            if(check_input(password)){
+                console.log("ATTENTION：输入非法字符！");
+            }else{
+                console.log("密码也没问题");
+            }
+        }else{ badboy=false;}
     }
     login = function () {
         catch_input();    
         console.log("user:"+people);
-        if(badboy===0)
+        if(badboy==true)
         {
             sending = JSON.stringify({
             people,
@@ -59,7 +52,7 @@ $(function ()
         }
         function denglu() {
             $.ajax({
-                url: "/BBT/backend/php/login.php",
+                url: "http://203.195.221.189/BBT/backend/php/login.php",
                 type: "POST",
                 contentTyoe: 'application/x-www-form-urlencoded',
                 dataType: "JSON",
@@ -67,6 +60,7 @@ $(function ()
                 // success:login_ornot=0
                 success: function (data) {
                     alert(data["errmsg"]);
+                    console.log(data["errmsg"]);
                     login_ornot=0;
                     check();
                 }
@@ -78,7 +72,7 @@ $(function ()
     // }
     signup = function () {
         catch_input();
-        if(badboy!=true){
+        if(badboy==true){
             sending = JSON.stringify({
                 people,
                 password

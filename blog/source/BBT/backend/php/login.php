@@ -12,27 +12,30 @@ if(!$conn){
  }
  $people=$data["people"];
  $pswd=$data["password"];
+ $checkif=0;
  //定义
-$sql="SELECT * From users  where username = '$people' ";
+$sql="SELECT password From users  where username = '$people' ";
 $result = $conn-> query($sql);
 $row=mysqli_fetch_assoc($result);
-if($row!=NULL){
+if($row){
     // setcookie("username",$people,time()+3600);
     if($row["password"]===$pswd){
         $result=[
-          "errmsg"=>"登录成功",
+          "errmsg"=>"Success",
             "errcode"=>0,
             "data"=>''
         ];
+        $checkif=1;
         echo json_encode($result);
         return;
     }
 }else{
     $result=[
         "errcode"=>1,
-        "errmsg"=>"你没注册过，你自己好好想想",
+        "errmsg"=>"Sighup please!",
          "data"=>''
     ];
+    $checkif=2;
     // var_dump($result);
     echo json_encode($result);
     return;
@@ -40,16 +43,22 @@ if($row!=NULL){
 
 if($row["username"]==$people){
     $result=[
-        "errmsg"=>"密码错了!!!!",
+        "errmsg"=>"Wrong password",
         "errcode"=>1,
         "data"=>''
     ];
+    $checkif=3;
     echo json_encode($result);
     return;
 }
+ if($checkif==0){
+    $result=["errmsg"=>"if not enter"];
+}
+if($checkif==2 OR $checkif==3){
  $result=[
             "errcode"=>1,
-            "errmsg"=>"你没注册过，你自己好好想想",
+            "errmsg"=>"Sighup please",
             "data"=>''
         ];
+}
 echo json_encode($result);
