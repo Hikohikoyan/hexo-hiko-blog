@@ -160,7 +160,7 @@ show_busuanzi_view_counts: true
 # donation button
 donate:
     enable: true
-    message: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!'
+    message: '我明白 是我太菜'
     wechatImage: https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png
     alipayImage: https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg
     
