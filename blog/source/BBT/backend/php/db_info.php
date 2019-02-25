@@ -5,3 +5,4 @@ $PSWD="1233211234567";
 $DB="bbs";
 $DB_LOGIN="users";
 $DB_SHOW="players";
+$DB_ICON="icons";

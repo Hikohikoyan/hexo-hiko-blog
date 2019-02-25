@@ -39,6 +39,12 @@ $(function ()
         element.src = "backend/img/11.jpeg"; 
         return; }
     }
+    changeIcon = function(){
+        element = document.getElementById('you');
+        var icon_name = document.getElementById('icon_file').textContent(); 
+        element.src="backend/img/"+icon_name;
+        return;
+    }
     var order = []; var allmsg = []; var allpeople = []; 
     var oldmsg; var newmsg; 
     var passage = document.createElement("div"); 

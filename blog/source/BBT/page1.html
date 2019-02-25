@@ -24,6 +24,7 @@
         <div class="doge"> 
             <img id="you"src="backend/img/11.jpeg" onclick="changeImage()"alt="你">
         </div>
+       
         <br>
         
             <textarea id="fudu" type="text" class="BBS" cols="30" rows="30" placeholder="如果你只会复读的话，我建议你把语言能力捐给有需要的人……" ></textarea>
@@ -32,6 +33,12 @@
     <div class="button1">
         <input type="submit" id="btn1"  value="好" onclick="hao()">
         <input type="submit" id="btn2"  value="点击复读" onclick="playfudu()">
+    </div>
+    <div id="youricon">
+        <form  enctype="multipart/form-data" action="backend/php/icon.php" onsubmit="changeIcon()" method="POST">
+            <input name="ICON" id="icon_file" type="file">
+            <input id="icon" type="submit" value="改个头像">
+        </form>
     </div>
 
     <div id="hahaha">
