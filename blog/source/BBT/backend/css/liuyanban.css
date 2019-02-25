@@ -2,6 +2,12 @@
     background-color: gainsboro;
     text-align: center;
 }
+h1{
+    position: relative;
+    top:30px;
+    text-align: center;
+    size: 150px;
+}
 #h1{
     background-size: 80%;
 }
@@ -16,15 +22,10 @@ background: center center no-repeat;
     position: relative;
     top: -888px;
 }
-h1{
-    position: absolute;
-    top:30px;
-    right: 55%;
-    text-align: center;
-    size: 150px;
-}
+
 h2{
     margin: 0%;
+    background-color: white;
     size: 88px;
 }
 .box1{
