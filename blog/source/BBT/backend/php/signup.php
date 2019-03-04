@@ -4,7 +4,7 @@ require_once("db_info.php");
 $data = file_get_contents('php://input');
 $data = json_decode($data, true);
 $conn=mysqli_connect($SERV,$USER,$PSWD,$DB);
-$time=getTime();
+//$time=getTime();
 if(!$conn){
     $result=["errmsg"=>"mysql connect failed"];
     exit;
@@ -24,7 +24,7 @@ if($row){
 ];
 echo json_encode($result);
 }else{
-    $sql="INSERT INTO users(num,username, password,logintime) VALUES ('','$username','$password','$time')";
+    $sql="INSERT INTO users(num,username, password,logintime) VALUES ('','$username','$password','')";
     $result=$conn->query($sql);
     $result=[
              "errcode"=>0,
