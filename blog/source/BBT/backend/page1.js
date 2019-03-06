@@ -41,7 +41,8 @@ $(function ()
     }
     changeIcon = function(){
         element = document.getElementById('you');
-        var icon_name = document.getElementById('icon_file').textContent(); 
+        var icon_name = document.getElementById('icon_file');
+        icon_name=icon_name.textContent; 
         element.src="backend/img/"+icon_name;
         return;
     }
