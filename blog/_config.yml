@@ -33,6 +33,7 @@ i18n_dir: :lang
 skip_render: 
  - BBT/backend/*
  - BBT/*.html
+ - Pandapancakes/*
    # - _post/BBT/backend/* 
    # - _post/BBT/*.html
 
