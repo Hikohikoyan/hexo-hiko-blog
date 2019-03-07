@@ -1,0 +1,21 @@
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Writing database to D:\\xampp\\htdocs\\learningcode\\blog/db.json","time":"2019-02-14T16:05:25.728Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Hexo version: 3.8.0","time":"2019-02-14T16:05:25.742Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Working directory: D:\\xampp\\htdocs\\learningcode\\blog\\","time":"2019-02-14T16:05:25.742Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Config loaded: D:\\xampp\\htdocs\\learningcode\\blog\\_config.yml","time":"2019-02-14T16:05:25.887Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-deployer-git","time":"2019-02-14T16:05:25.989Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-generator-category","time":"2019-02-14T16:05:25.993Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-generator-archive","time":"2019-02-14T16:05:25.996Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-generator-index","time":"2019-02-14T16:05:25.998Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-migrator-rss","time":"2019-02-14T16:05:26.187Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-generator-tag","time":"2019-02-14T16:05:26.188Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-renderer-ejs","time":"2019-02-14T16:05:26.193Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-renderer-stylus","time":"2019-02-14T16:05:26.196Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-renderer-marked","time":"2019-02-14T16:05:26.202Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Plugin loaded: hexo-server","time":"2019-02-14T16:05:26.273Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Script loaded: themes\\hiker\\scripts\\fancybox.js","time":"2019-02-14T16:05:26.275Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":30,"msg":"Deploying: git","time":"2019-02-14T16:05:26.276Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":30,"msg":"Clearing .deploy_git folder...","time":"2019-02-14T16:05:26.282Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":30,"msg":"Copying files from public folder...","time":"2019-02-14T16:05:26.289Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":30,"msg":"Copying files from extend dirs...","time":"2019-02-14T16:05:26.308Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":30,"msg":"Deploy done: git","time":"2019-02-14T16:05:39.939Z","v":0}
+{"name":"hexo","hostname":"LAPTOP-VQ8J910Q","pid":17604,"level":20,"msg":"Database saved","time":"2019-02-14T16:05:39.941Z","v":0}

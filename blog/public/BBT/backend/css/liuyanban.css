@@ -1,0 +1,45 @@
+*{
+    background-color: gainsboro;
+    text-align: center;
+}
+h1{
+    position: relative;
+    top:30px;
+    text-align: center;
+    size: 150px;
+}
+#h1{
+    background-size: 80%;
+}
+#bbs_back{
+background: center center no-repeat;
+}
+#login_signup{
+    background-color: #fff;
+    margin: 0;
+    padding: 300px;
+    opacity: 0.8;
+    position: relative;
+    top: -888px;
+}
+
+h2{
+    margin: 0%;
+    background-color: white;
+    size: 88px;
+}
+.box1{
+    background-color:#fff;
+    opacity: 0.8;
+    margin-top: 0%;
+    margin: 0%;
+}
+.adv{
+    position: fixed;
+    bottom: 0px;
+    right:0px;
+}
+label,input,button{
+    margin: 0;
+    padding: 0;
+}
