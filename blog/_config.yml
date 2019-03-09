@@ -34,6 +34,7 @@ skip_render:
  - BBT/backend/*
  - BBT/*.html
  - Pandapancakes/*
+ - BBT-2019-Spring-Registration/*
    # - _post/BBT/backend/* 
    # - _post/BBT/*.html
 
